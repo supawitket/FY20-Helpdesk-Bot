@@ -8,7 +8,11 @@ class EchoBot extends ActivityHandler {
         super();
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
-            await context.sendActivity("hi");
+            if(context.activity.text.indexOf('ดี') !== -1 ) {
+                await context.sendActivity("สวัสดีค่ะ");
+            } else {
+                await context.sendActivity("hello");
+            }
             // if(context.text.indexOf('ดี') !== -1 ) {
             //     await context.sendActivity(`สวัสดีคับ`);
             // } else {
