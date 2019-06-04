@@ -10,8 +10,10 @@ class EchoBot extends ActivityHandler {
         this.onMessage(async (context, next) => {
             if(context.text.indexOf('ดี') !== -1 ) {
                 await context.sendActivity(`สวัสดีคับ`);
+            } else {
+                await context.sendActivity(`ฮาย`);
             }
-            await context.sendActivity(`You said '${ context.activity.text }'`);
+            //await context.sendActivity(`You said '${ context.activity.text }'`);
 
             // By calling next() you ensure that the next BotHandler is run.
             await next();
