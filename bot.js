@@ -34,7 +34,7 @@ class EchoBot extends ActivityHandler {
                 )] });
             } else if(context.activity.text.indexOf('เปลี่ยน') !== -1 && context.activity.text.indexOf('พาส') !== -1) {
                 await context.sendActivity("สามารถทำการเปลี่ยนรหัสผ่านได้โดยการ Login เข้าไปที่ https://portal.office.com > Settings > Change Password ค่ะ");
-            } else if(context.activity.text.indexOf('โหลด') !== -1 && context.activity.text.indexOf('office') !== -1) {
+            } else if(context.activity.text.indexOf('โหลด') !== -1 && context.activity.text.indexOf('Office') !== -1) {
                 await context.sendActivity("สามารถดาวน์โหลด Office 365 ProPlus โดยการ Loging เข้าไปที่ https://portal.office.com แล้วคลิก Download โปรแกรมสำหรับ Mac และ PC");
                 await context.sendActivity("สำหรับ iOS และ Android สามารถ Download ได้ผ่าน App Store และ Play Store แล้วทำการ Login ด้วย Coporate Account เพื่อ Enable features ต่างๆในการใช้งานค่ะ");
             } else if(context.activity.text.indexOf('ลง') !== -1 && context.activity.text.indexOf('เครื่อง') !== -1) {
