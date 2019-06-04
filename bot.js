@@ -16,17 +16,17 @@ class EchoBot extends ActivityHandler {
                     CardFactory.images(['https://zdnet3.cbsistatic.com/hub/i/2019/02/12/745b7ed1-f19c-4718-ad0b-ae7cb7a14fe9/fac8658d4aa5c4bcbda293ab3e1a3d3b/microsoft.png']),
                     CardFactory.actions([
                         {
-                            type: '',
+                            type: 'openUrl',
                             title: 'Hardware Issues',
                             value: 'https://docs.microsoft.com/en-us/azure/bot-service/'
                         },
                         {
-                            type: '',
+                            type: 'openUrl',
                             title: 'Software Issues',
                             value: 'https://docs.microsoft.com/en-us/azure/bot-service/'
                         },
                         {
-                            type: '',
+                            type: 'openUrl',
                             title: 'Software Issues',
                             value: 'https://docs.microsoft.com/en-us/azure/bot-service/'
                         }
