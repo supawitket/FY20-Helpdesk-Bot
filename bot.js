@@ -9,7 +9,7 @@ class EchoBot extends ActivityHandler {
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
             if(context.activity.text.indexOf('ดี') !== -1 ) {
-                // await context.sendActivity("สวัสดีค่ะ");
+                await context.sendActivity("สวัสดีค่ะ");
                 await context.sendActivity({ attachments: [CardFactory.heroCard(
                     'BotFramework Hero Card',
                     CardFactory.images(['https://sec.ch9.ms/ch9/7ff5/e07cfef0-aa3b-40bb-9baa-7c9ef8ff7ff5/buildreactionbotframework_960.jpg']),
