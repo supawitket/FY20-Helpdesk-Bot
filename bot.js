@@ -9,10 +9,11 @@ class EchoBot extends ActivityHandler {
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
             if(context.activity.text.indexOf('ดี') !== -1 ) {
-                await context.sendActivity("สวัสดีค่ะ");
+                await context.sendActivity("สวัสดีค่ะ ยินดีต้อนรับเข้าสู่ Intelligent Helpdesk Bot");
+                await context.sendActivity("คุณสามารถคลิกเมนูด้านล่างเพื่อเข้าสู่หมวดหมู่ต่างๆ หรือถามคำถามโดยการพิมได้เลยค่ะ");
                 await context.sendActivity({ attachments: [CardFactory.heroCard(
-                    'BotFramework Hero Card',
-                    CardFactory.images(['https://sec.ch9.ms/ch9/7ff5/e07cfef0-aa3b-40bb-9baa-7c9ef8ff7ff5/buildreactionbotframework_960.jpg']),
+                    'Helpdesk Onboarding',
+                    CardFactory.images(['https://zdnet3.cbsistatic.com/hub/i/2019/02/12/745b7ed1-f19c-4718-ad0b-ae7cb7a14fe9/fac8658d4aa5c4bcbda293ab3e1a3d3b/microsoft.png']),
                     CardFactory.actions([
                         {
                             type: 'Hardware Issues',
@@ -32,7 +33,7 @@ class EchoBot extends ActivityHandler {
                     ])
                 )] });
             } else {
-                await context.sendActivity("hello2");
+                await context.sendActivity("สวัสดีค่ะ วันนี้เป็นยังไงบ้างคะ");
             }
             // if(context.text.indexOf('ดี') !== -1 ) {
             //     await context.sendActivity(`สวัสดีคับ`);
