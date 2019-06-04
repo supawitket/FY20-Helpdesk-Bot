@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-const { ActivityHandler } = require('botbuilder');
+const { ActivityHandler, AttachmentLayoutTypes, CardFactory } = require('botbuilder');
 
 class EchoBot extends ActivityHandler {
     constructor() {
@@ -22,7 +22,7 @@ class EchoBot extends ActivityHandler {
                     ])
                 )] });
             } else {
-                await context.sendActivity("hello");
+                await context.sendActivity("hello2");
             }
             // if(context.text.indexOf('ดี') !== -1 ) {
             //     await context.sendActivity(`สวัสดีคับ`);
